@@ -1,13 +1,13 @@
 //
 //  AppDelegate.swift
-//  DB8
+//  FirebaseAuthentication
 //
-//  Created by Alexander Zhang (student LM) on 2/19/20.
+//  Created by Alexander Zhang (student LM) on 1/27/20.
 //  Copyright © 2020 Alexander Zhang (student LM). All rights reserved.
 //
 
 import UIKit
-
+import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
