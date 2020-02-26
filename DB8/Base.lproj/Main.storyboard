@@ -132,6 +132,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="log out"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dt-jT-Sdv">
+                                <rect key="frame" x="173" y="637" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="go to chat"/>
+                                <connections>
+                                    <segue destination="jzR-Ef-idu" kind="show" destinationCreationSelector="goToChat:" id="dOO-Z9-fxV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uUP-Og-to9"/>
@@ -140,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvi-dq-IWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1648" y="76"/>
+            <point key="canvasLocation" x="1647.826086956522" y="75.669642857142847"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Vet-aV-jjc">
@@ -196,20 +204,42 @@
             </objects>
             <point key="canvasLocation" x="844.92753623188412" y="-129.24107142857142"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="aug-tC-lz1">
+        <!--Hosting Controller-->
+        <scene sceneID="3JN-J9-fLP">
             <objects>
-                <viewController id="UIg-ZD-MC8" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="I5C-Mw-2f4">
+                <hostingController id="jzR-Ef-idu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MOI-Z2-kgq"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Fo-a7-YfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2351" y="76"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dfv-hP-Jnn">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkf-8h-ctH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="au6-Wa-Eab" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rgF-2r-lmX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adF-BV-zco">
+                                <rect key="frame" x="136" y="221" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="jzR-Ef-idu" kind="embed" id="HC6-nc-DRZ"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="ihh-c5-JTy"/>
+                        <viewLayoutGuide key="safeArea" id="Dtl-e1-1LO"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wgG-2d-vUj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2309" y="76"/>
+            <point key="canvasLocation" x="3000" y="13"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dOO-Z9-fxV"/>
+    </inferredMetricsTieBreakers>
 </document>
