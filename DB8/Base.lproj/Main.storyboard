@@ -114,6 +114,62 @@
             </objects>
             <point key="canvasLocation" x="846" y="552"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="j4M-nE-zdN">
+            <objects>
+                <viewController id="cru-rm-HM7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BHh-ig-ejr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Firebase Username" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qbe-x7-jAB">
+                                <rect key="frame" x="131" y="318" width="153" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qUE-xd-xue">
+                                <rect key="frame" x="153" y="475" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Topics Debated"/>
+                                <connections>
+                                    <segue destination="Hdo-Z3-kqm" kind="show" id="isw-Q7-gD1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oFk-B2-Dsl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pfw-t0-ghI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QQs-cz-kjG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648" y="895"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OI1-ny-KdC">
+            <objects>
+                <viewController id="Hdo-Z3-kqm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Szw-72-me6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u6M-Jj-cNT">
+                                <rect key="frame" x="87" y="357" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="tDk-lx-zp5"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="yWe-Sr-Xci"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9Fg-Gt-trM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5bh-X2-UXm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9F-wr-kh2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2609" y="895"/>
+        </scene>
         <!--Menu View Controller-->
         <scene sceneID="XJ2-2Y-ASK">
             <objects>
@@ -132,20 +188,20 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="log out"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH0-3s-9qK">
+                                <rect key="frame" x="185" y="647" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Profile"/>
+                                <connections>
+                                    <segue destination="cru-rm-HM7" kind="show" id="0a3-4t-L0Q"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dt-jT-Sdv">
-                                <rect key="frame" x="166" y="546" width="83" height="30"/>
+                                <rect key="frame" x="166" y="557" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter Match"/>
                                 <connections>
                                     <segue destination="jzR-Ef-idu" kind="show" destinationCreationSelector="goToChat:" id="dOO-Z9-fxV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BH0-3s-9qK">
-                                <rect key="frame" x="186" y="629" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Profile"/>
-                                <connections>
-                                    <segue destination="T1E-jA-LcG" kind="show" id="D9A-oN-fud"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -211,62 +267,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZC-dz-NbY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="844.92753623188412" y="-129.24107142857142"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="7N6-bl-Cfr">
-            <objects>
-                <viewController id="T1E-jA-LcG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hsV-36-LdY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Firebase Username" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="na5-8X-lsy">
-                                <rect key="frame" x="131" y="209" width="153" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3s-oj-uBo">
-                                <rect key="frame" x="153" y="421" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Topics Debated"/>
-                                <connections>
-                                    <segue destination="YqY-8Z-HZu" kind="show" id="bdI-6m-wC6"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="IOf-zy-rPT"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="UVT-bW-Z4u"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LdN-0A-T46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1648" y="956"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="teP-dk-S4v">
-            <objects>
-                <viewController id="YqY-8Z-HZu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0bj-6N-gir">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vbs-ZU-inN">
-                                <rect key="frame" x="87" y="217" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="CBT-7M-bCW"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="D0u-Pi-ZVO"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="QcL-iG-z48"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="WQ6-Hs-Ddx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbj-t3-wdI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2730" y="956"/>
         </scene>
         <!--Hosting Controller-->
         <scene sceneID="3JN-J9-fLP">
