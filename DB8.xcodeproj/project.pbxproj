@@ -23,6 +23,7 @@
 		88CFFB352406B1D0003F8F01 /* Screen Shot 2020-01-21 at 5.16.04 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 88CFFB342406B1D0003F8F01 /* Screen Shot 2020-01-21 at 5.16.04 PM.png */; };
 		88CFFB372406B449003F8F01 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFFB362406B449003F8F01 /* ChatViewController.swift */; };
 		88CFFB392406B492003F8F01 /* ChatContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CFFB382406B492003F8F01 /* ChatContentView.swift */; };
+		8EDA9D4D240810BC00B066ED /* RandomTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDA9D4C240810BC00B066ED /* RandomTopicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		88CFFB342406B1D0003F8F01 /* Screen Shot 2020-01-21 at 5.16.04 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-01-21 at 5.16.04 PM.png"; sourceTree = "<group>"; };
 		88CFFB362406B449003F8F01 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		88CFFB382406B492003F8F01 /* ChatContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContentView.swift; sourceTree = "<group>"; };
+		8EDA9D4C240810BC00B066ED /* RandomTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTopicViewController.swift; sourceTree = "<group>"; };
 		EB20413D8AAB1D881B2038CA /* Pods-DB8.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DB8.release.xcconfig"; path = "Target Support Files/Pods-DB8/Pods-DB8.release.xcconfig"; sourceTree = "<group>"; };
 		EFD77393C0A6D9726195DD7D /* Pods-DB8.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DB8.debug.xcconfig"; path = "Target Support Files/Pods-DB8/Pods-DB8.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				88484A6C23FD64CB002A7CFA /* ViewController.swift */,
 				8806349323FEDD110051FE02 /* LogInViewController.swift */,
 				88484A6E23FD64CB002A7CFA /* Main.storyboard */,
+				8EDA9D4C240810BC00B066ED /* RandomTopicViewController.swift */,
 				88CFFB362406B449003F8F01 /* ChatViewController.swift */,
 				88CFFB382406B492003F8F01 /* ChatContentView.swift */,
 				88CFFB3224002E71003F8F01 /* MenuViewController.swift */,
@@ -357,6 +360,7 @@
 				8806349223FEDC5B0051FE02 /* SignUpViewController.swift in Sources */,
 				8806349423FEDD110051FE02 /* LogInViewController.swift in Sources */,
 				88CFFB392406B492003F8F01 /* ChatContentView.swift in Sources */,
+				8EDA9D4D240810BC00B066ED /* RandomTopicViewController.swift in Sources */,
 				88484A6B23FD64CB002A7CFA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
