@@ -201,7 +201,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter Match"/>
                                 <connections>
-                                    <segue destination="jzR-Ef-idu" kind="show" destinationCreationSelector="goToChat:" id="dOO-Z9-fxV"/>
+                                    <segue destination="KPe-Ds-1Xk" kind="show" id="lP6-FE-hee"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -276,7 +276,7 @@
                 </hostingController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Fo-a7-YfQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2351" y="76"/>
+            <point key="canvasLocation" x="3136" y="-66"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Dfv-hP-Jnn">
@@ -300,14 +300,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tkf-8h-ctH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3000" y="13"/>
+            <point key="canvasLocation" x="3822" y="-27"/>
         </scene>
         <!--Random Topic View Controller-->
         <scene sceneID="jww-bE-zN0">
             <objects>
                 <viewController id="KPe-Ds-1Xk" customClass="RandomTopicViewController" customModule="DB8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOH-ew-GP9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOq-Af-c5n">
@@ -334,6 +334,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VGa-jZ-Wrf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Zoz-3K-XKq"/>
                     <connections>
                         <outlet property="resultLabel" destination="dOq-Af-c5n" id="qsq-ge-p3M"/>
                         <outlet property="spinButton" destination="qLg-4Y-zcW" id="UaJ-Je-fBP"/>
@@ -342,10 +343,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mus-yA-Lr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3969.5652173913045" y="12.723214285714285"/>
+            <point key="canvasLocation" x="2419" y="76"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="dOO-Z9-fxV"/>
-    </inferredMetricsTieBreakers>
 </document>
