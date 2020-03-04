@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:OldChatViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:DB8.xcodeproj">
    </FileRef>
    <FileRef
