@@ -9,7 +9,7 @@ struct ChatMessage : Hashable {
 
 struct ChatRow : View {
     var chatMessage: ChatMessage
-    var body: some View {
+    var body: some View {//adfsklasdfkjkdjshfkjqsdfwelfqwqefkj
         Group {
             if !chatMessage.isMe {
                 HStack {
