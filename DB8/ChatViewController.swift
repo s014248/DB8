@@ -10,7 +10,7 @@ import Foundation
 import Combine
 import SwiftUI
 
-class ChatViewController : ObservableObject {
+class OldChatViewController : ObservableObject {
     var didChange = PassthroughSubject<Void, Never>()
     
     @Published var messages = [

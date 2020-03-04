@@ -14,7 +14,7 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var imagePicker : UIImagePickerController?
    /* @IBOutlet weak var imageView: UIImageView!*/
     let contentView = ChatContentView()
-    var chatController = ChatViewController()
+    var chatController = OldChatViewController()
     @IBSegueAction func goToChat(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: contentView.environmentObject(chatController))
         

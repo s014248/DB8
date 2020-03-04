@@ -45,7 +45,7 @@ struct ChatRow : View {
 struct ChatContentView : View {
     
     @State var composedMessage: String = ""
-    @EnvironmentObject var chatController: ChatViewController
+    @EnvironmentObject var chatController: OldChatViewController
     
     var body: some View {
       
@@ -77,7 +77,7 @@ struct ChatContentView : View {
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
         ChatContentView()
-        .environmentObject(ChatViewController())
+        .environmentObject(OldChatViewController())
     }
 }
 #endif
