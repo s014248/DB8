@@ -133,7 +133,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Topics Debated"/>
                                 <connections>
-                                    <segue destination="2tt-r9-Koz" kind="show" id="hxL-T5-hYd"/>
+                                    <segue destination="L9p-nV-z5c" kind="show" id="l9w-bB-l6I"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,33 +147,33 @@
             <point key="canvasLocation" x="1648" y="895"/>
         </scene>
         <!--Table View Controller-->
-        <scene sceneID="rIv-Kg-eRF">
+        <scene sceneID="WDs-XN-mix">
             <objects>
-                <tableViewController id="2tt-r9-Koz" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aME-Mt-hsI">
+                <tableViewController id="L9p-nV-z5c" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RKX-yO-Xr3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Ips-lT-du0">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jY2-Cw-nZY">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ips-lT-du0" id="aZ0-kR-IkG">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jY2-Cw-nZY" id="XXz-wK-TIk">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="2tt-r9-Koz" id="fhv-Xi-hTA"/>
-                            <outlet property="delegate" destination="2tt-r9-Koz" id="5rE-MO-Waj"/>
+                            <outlet property="dataSource" destination="L9p-nV-z5c" id="Q7E-ZT-neB"/>
+                            <outlet property="delegate" destination="L9p-nV-z5c" id="0cI-Ro-4E6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="o7w-kg-yRC"/>
+                    <navigationItem key="navigationItem" id="0zt-Ax-eWV"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="INt-g4-So9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xtf-6N-hw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2686" y="895"/>
+            <point key="canvasLocation" x="2683" y="895"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="utn-Ij-kPx">
