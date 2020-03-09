@@ -7,7 +7,7 @@ target 'DB8' do
 
   # Pods for DB8
 pod 'GoogleSignIn'
-pod 'Firebase/Core'
+#pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'MessageKit'

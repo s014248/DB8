@@ -196,8 +196,8 @@
 				88484A6123FD64CB002A7CFA /* Sources */,
 				88484A6223FD64CB002A7CFA /* Frameworks */,
 				88484A6323FD64CB002A7CFA /* Resources */,
-				9C85822F350B21144DF1A325 /* [CP] Embed Pods Frameworks */,
-				C246B7E22C15911C066D2DF4 /* [CP] Copy Pods Resources */,
+				08C3484C6662591FC2D09A25 /* [CP] Embed Pods Frameworks */,
+				21A6B42C70F3AA64F82A37F8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,7 +317,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9C85822F350B21144DF1A325 /* [CP] Embed Pods Frameworks */ = {
+		08C3484C6662591FC2D09A25 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -334,7 +334,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DB8/Pods-DB8-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C246B7E22C15911C066D2DF4 /* [CP] Copy Pods Resources */ = {
+		21A6B42C70F3AA64F82A37F8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
