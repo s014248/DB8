@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/s014248/Desktop/DB8/DB8/OldChatViewController.swift">
-   </FileRef>
-   <FileRef
       location = "group:DB8.xcodeproj">
    </FileRef>
    <FileRef

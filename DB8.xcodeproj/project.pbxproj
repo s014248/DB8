@@ -10,6 +10,9 @@
 		7BEF784AA201F399AD0F4171 /* Pods_DB8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2317C328088504F827612BF6 /* Pods_DB8.framework */; };
 		8806349223FEDC5B0051FE02 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8806349123FEDC5B0051FE02 /* SignUpViewController.swift */; };
 		8806349423FEDD110051FE02 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8806349323FEDD110051FE02 /* LogInViewController.swift */; };
+		883F76DF24128B3100D87B46 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F76DE24128B3100D87B46 /* ChatViewController.swift */; };
+		883F76E124128C4100D87B46 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F76E024128C4100D87B46 /* Chat.swift */; };
+		883F76E324128C6000D87B46 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F76E224128C6000D87B46 /* Message.swift */; };
 		88484A6923FD64CB002A7CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88484A6823FD64CB002A7CFA /* AppDelegate.swift */; };
 		88484A6B23FD64CB002A7CFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88484A6A23FD64CB002A7CFA /* SceneDelegate.swift */; };
 		88484A6D23FD64CB002A7CFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88484A6C23FD64CB002A7CFA /* ViewController.swift */; };
@@ -47,6 +50,9 @@
 		2317C328088504F827612BF6 /* Pods_DB8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DB8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8806349123FEDC5B0051FE02 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8806349323FEDD110051FE02 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		883F76DE24128B3100D87B46 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		883F76E024128C4100D87B46 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		883F76E224128C6000D87B46 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		88484A6523FD64CB002A7CFA /* DB8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DB8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88484A6823FD64CB002A7CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88484A6A23FD64CB002A7CFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +141,9 @@
 				88484A6C23FD64CB002A7CFA /* ViewController.swift */,
 				8806349323FEDD110051FE02 /* LogInViewController.swift */,
 				88484A6E23FD64CB002A7CFA /* Main.storyboard */,
+				883F76E024128C4100D87B46 /* Chat.swift */,
+				883F76E224128C6000D87B46 /* Message.swift */,
+				883F76DE24128B3100D87B46 /* ChatViewController.swift */,
 				8EDA9D4C240810BC00B066ED /* RandomTopicViewController.swift */,
 				889278AD240FF9810094FD1E /* OldChatViewController.swift */,
 				88CFFB382406B492003F8F01 /* ChatContentView.swift */,
@@ -187,7 +196,8 @@
 				88484A6123FD64CB002A7CFA /* Sources */,
 				88484A6223FD64CB002A7CFA /* Frameworks */,
 				88484A6323FD64CB002A7CFA /* Resources */,
-				C5C4925366F3465EA51C399F /* [CP] Embed Pods Frameworks */,
+				9C85822F350B21144DF1A325 /* [CP] Embed Pods Frameworks */,
+				C246B7E22C15911C066D2DF4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -307,7 +317,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C5C4925366F3465EA51C399F /* [CP] Embed Pods Frameworks */ = {
+		9C85822F350B21144DF1A325 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,6 +332,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DB8/Pods-DB8-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C246B7E22C15911C066D2DF4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DB8/Pods-DB8-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DB8/Pods-DB8-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DB8/Pods-DB8-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EBA342259F9DEFEA80A65848 /* [CP] Check Pods Manifest.lock */ = {
@@ -359,8 +386,11 @@
 				8806349223FEDC5B0051FE02 /* SignUpViewController.swift in Sources */,
 				8806349423FEDD110051FE02 /* LogInViewController.swift in Sources */,
 				88CFFB392406B492003F8F01 /* ChatContentView.swift in Sources */,
+				883F76E124128C4100D87B46 /* Chat.swift in Sources */,
 				8EDA9D4D240810BC00B066ED /* RandomTopicViewController.swift in Sources */,
 				889278AE240FF9810094FD1E /* OldChatViewController.swift in Sources */,
+				883F76E324128C6000D87B46 /* Message.swift in Sources */,
+				883F76DF24128B3100D87B46 /* ChatViewController.swift in Sources */,
 				88484A6B23FD64CB002A7CFA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
