@@ -69,7 +69,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                 print("Error: \(error)")
                 return
             } else {
-                
+                var xsdfsdf = 0
                 //Count the no. of documents returned
                 guard let queryCount = chatQuerySnap?.documents.count else {
                     return
@@ -82,7 +82,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                 else if queryCount >= 1 {
                     //Chat(s) found for currentUser
                     for doc in chatQuerySnap!.documents {
-                        
+                        //hgh
                         let chat = Chat(dictionary: doc.data())
                         //Get the chat which has user2 id
                         if (chat?.users.contains(self.user2UID!))! {
