@@ -20,7 +20,8 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("GUIGUGIGUI")
+        user2UID = "Cmy3rjqaFngw3iLS5pYtic0Lb493"
         self.title = user2Name ?? "Chat"
 
         navigationItem.largeTitleDisplayMode = .never
@@ -57,7 +58,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     }
     
     func loadChat() {
-        
+        print("AHUHUHHHUHU")
         //Fetch all the chats which has current user in it
         let db = Firestore.firestore().collection("Chats")
                 .whereField("users", arrayContains: Auth.auth().currentUser?.uid ?? "Not Found User 1")
