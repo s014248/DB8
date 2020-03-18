@@ -13,12 +13,13 @@ import SwiftUI
 class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var imagePicker : UIImagePickerController?
    /* @IBOutlet weak var imageView: UIImageView!*/
-    let contentView = ChatContentView()
-    var chatController = OldChatViewController()
-    @IBSegueAction func goToChat(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: contentView.environmentObject(chatController))
+    //let contentView = ChatContentView()
+  //  var chatController = OldChatViewController()
+    
+    /*@IBSegueAction func goToChat(_ coder: NSCoder) -> UIViewController? {
+       // return UIHostingController(coder: coder, rootView: contentView.environmentObject(chatController))
         
-    }
+    }*/
     override func viewDidLoad() {
         super.viewDidLoad()
         /*imageView.layer.borderWidth = 1
