@@ -14,7 +14,7 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var wheel: UIPickerView!
     @IBOutlet weak var spinButton: UIButton!
     
-    
+    //babababa
     var topics = [String]()
     
     override func viewDidLoad() {
