@@ -208,7 +208,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         return isFromCurrentSender(message: message) ? .blue: .lightGray
     }
 
-    func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+    /*func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
         
         if message.sender.senderId == currentUser.uid {
             SDWebImageManager.shared.loadImage(with: currentUser.photoURL, options: .highPriority, progress: nil) { (image, data, error, cacheType, isFinished, imageUrl) in
@@ -219,7 +219,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                 avatarView.image = image
             }
         }
-    }
+    }*/
 
     func messageStyle(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageStyle {
 
