@@ -24,7 +24,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         if (currentUser.uid=="MsS3bDi1iRXwpDnDOBPctdAdhTx1"){
             user2UID = "Cmy3rjqaFngw3iLS5pYtic0Lb493"
         }
-        if (currentUser.uid=="Cmy3rjqaFngw3iLS5pYtic0Lb493"){
+        else{
             user2UID = "MsS3bDi1iRXwpDnDOBPctdAdhTx1"
         }
         self.title = user2Name ?? "Chat"
