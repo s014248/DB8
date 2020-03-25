@@ -64,7 +64,7 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     @IBAction func goToMatchPressed(_ sender: Any) {
-        
+        ran = false
         delete(collection: Firestore.firestore().collection("Chats").document("IcjyOhLDEmCQw9toNNQQ").collection("thread"), batchSize: 500)
         print("ahuhu")
     }
