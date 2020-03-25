@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import InputBarAccessoryView
+import Firebase
+import MessageKit
+import FirebaseFirestore
+import SDWebImage
 
 class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -16,6 +21,7 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     //babababa
     var topics = [String]()
+    var ran = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +63,32 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
         return topics[row]
     }
     
+    @IBAction func goToMatchPressed(_ sender: Any) {
+        
+        delete(collection: Firestore.firestore().collection("Chats").document("IcjyOhLDEmCQw9toNNQQ").collection("thread"), batchSize: 500)
+        print("ahuhu")
+    }
+    func delete(collection: CollectionReference, batchSize: Int = 100) {
+        print("bbbbbbbbbb")
+        if (ran){
+            return
+        }
+    // Limit query to avoid out-of-memory errors on large collections.
+    // When deleting a collection guaranteed to fit in memory, batching can be avoided entirely.
+        collection.limit(to: batchSize).getDocuments { (docset, error) in
+      // An error occurred.
+            let docset = docset
 
+            let batch = collection.firestore.batch()
+            docset?.documents.forEach { batch.deleteDocument($0.reference) }
+
+            batch.commit {_ in
+                self.ran = true
+                self.delete(collection: collection, batchSize: batchSize)
+            }
+            print("jjaaj")
+        }
+    }
 
 }
 
