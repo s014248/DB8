@@ -18,14 +18,12 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var wheel: UIPickerView!
     @IBOutlet weak var spinButton: UIButton!
-    
     //babababa
     var topics = [String]()
     var ran = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         topics = ["Is water wet?", "Was it fair for harambe to be killed?", "Fractions or Decimals?", "Should school start times be later?", "Should Debate Teams be considered a sport?", "Should the SAT go away?", "Did Thanos have the right idea?", "Is it acceptable to put milk before cereal?", "Popeyes or Chick Fil A?", "Do laugh tracks make shows better?", "Pineapple on pizza?", "Cat or dogs?", "What's more attractive: money or personality?", "Star wars or star trek?"]
         
         resultLabel.text = ""

@@ -10,7 +10,15 @@ import UIKit
 import FirebaseAuth
 import FirebaseStorage
 import SwiftUI
+import InputBarAccessoryView
+import Firebase
+import MessageKit
+import FirebaseFirestore
+import SDWebImage
+import Foundation
+
 class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    var stance = "bob"
     var imagePicker : UIImagePickerController?
    /* @IBOutlet weak var imageView: UIImageView!*/
     //let contentView = ChatContentView()
@@ -34,6 +42,84 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
 
+    @IBAction func EnterMatchTouchedUp(_ sender: Any) {
+        print("QWERPQWYETWIQUEPTWYEQUTUEIWQTY")
+        var joe = Int.random(in: 1..<3)
+        var firebasecontent = "ddd"
+        if (joe==1){
+            firebasecontent = "Negative"
+        }
+        else{
+            firebasecontent = "Positive"
+        }
+        let data: [String: Any] = [
+            "content": firebasecontent
+        ]
+        let fakedata: [String: Any] = [
+            "content": "empty"
+        ]
+        Firestore.firestore().collection("test").document("a").getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()/*.map(String.init(describing:)) ?? "nil"*/
+                if let givenstance = dataDescription?["content"] as? String{
+                    if (givenstance=="Positive"){
+                        self.stance = "Positive"
+                        Firestore.firestore().collection("test").document("a").setData(fakedata)
+                    }
+                    else if (givenstance=="Negative"){
+                        self.stance = "Negative"
+                        Firestore.firestore().collection("test").document("a").setData(fakedata)
+                    }
+                    else{
+                        if (firebasecontent == "Negative"){
+                            self.stance = "Positive"
+                            Firestore.firestore().collection("test").document("a").setData(data)
+                        }
+                        else{
+                            self.stance = "Negative"
+                            Firestore.firestore().collection("test").document("a").setData(data)
+                        }
+                    }
+                }
+                
+               // stance = "positive"
+            }
+        }
+       /* Firestore.firestore().collection("test").document("positive").getDocument { (document, error) in
+            if let document = document, document.exists {
+                stance = "negative"
+            }
+        }
+        if (stance=="bob"){
+            var joe = Int.random(in: 1..<3)
+            if (joe==1){
+                Firestore.firestore().collection("test").document("negative").setData(data)
+                stance = "positive"
+            }
+            if (joe==2){
+                Firestore.firestore().collection("test").document("positive").setData(data)
+                stance = "negative"
+            }
+        }
+        else{
+            
+        }*/
+            /*self.messagesCollectionView.scrollToBottom()
+            
+        })*/
+        let seconds = 3.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.performSegue(withIdentifier: "seguetime", sender: nil)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        // get a reference to the second view controller
+        let secondViewController = segue.destination as! MatchingViewController
+
+        // set a variable in the second view controller with the String to pass
+        secondViewController.receivedString = stance
+    }
     /*@IBAction func changeImageTouchedUp(_ sender: UIButton) {
         self.present(imagePicker!, animated: true, completion: nil)
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -268,7 +268,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enter Match"/>
                                 <connections>
-                                    <segue destination="ksl-MN-tkG" kind="show" id="1AO-6F-bdy"/>
+                                    <action selector="EnterMatchTouchedUp:" destination="vFF-29-9MK" eventType="touchUpInside" id="Odq-8L-KWv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -276,6 +276,9 @@
                         <viewLayoutGuide key="safeArea" id="uUP-Og-to9"/>
                     </view>
                     <navigationItem key="navigationItem" id="RQs-8o-fqR"/>
+                    <connections>
+                        <segue destination="ksl-MN-tkG" kind="show" identifier="seguetime" id="drU-b5-KbC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvi-dq-IWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -401,14 +404,24 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bs7-7s-oju">
+                                <rect key="frame" x="186" y="542" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bs7-7s-oju" firstAttribute="centerX" secondItem="WgS-3n-T7T" secondAttribute="centerX" id="win-dT-lQT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UFv-19-5W7"/>
                     </view>
                     <navigationItem key="navigationItem" id="ed8-AK-N08"/>
                     <connections>
                         <outlet property="enterMatchButton" destination="Szt-DB-ifl" id="SFG-VD-tKu"/>
                         <outlet property="label" destination="KVF-Al-VEm" id="hq7-Ri-46v"/>
+                        <outlet property="stanceLabel" destination="Bs7-7s-oju" id="JBP-qC-RZr"/>
                         <outlet property="timeLabel" destination="2BV-DG-GMW" id="QIU-8X-HaG"/>
                     </connections>
                 </viewController>
