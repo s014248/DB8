@@ -394,7 +394,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="Enter Match"/>
                                 <connections>
-                                    <segue destination="KPe-Ds-1Xk" kind="show" id="1JI-71-vsH"/>
+                                    <action selector="EnterMatchTouchedUp:" destination="ksl-MN-tkG" eventType="touchUpInside" id="CwM-ZO-5hq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Entering Match" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVF-Al-VEm">
@@ -423,6 +423,7 @@
                         <outlet property="label" destination="KVF-Al-VEm" id="hq7-Ri-46v"/>
                         <outlet property="stanceLabel" destination="Bs7-7s-oju" id="JBP-qC-RZr"/>
                         <outlet property="timeLabel" destination="2BV-DG-GMW" id="QIU-8X-HaG"/>
+                        <segue destination="KPe-Ds-1Xk" kind="show" identifier="seguetime2" id="9y4-Tt-aZb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R7T-3j-4Q9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -467,14 +468,24 @@
                                     <action selector="spinPressed:" destination="KPe-Ds-1Xk" eventType="touchUpInside" id="GZs-pS-k1g"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="stance label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWo-YU-88E">
+                                <rect key="frame" x="161" y="573" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DWo-YU-88E" firstAttribute="centerX" secondItem="NOH-ew-GP9" secondAttribute="centerX" id="sSv-9v-3UQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VGa-jZ-Wrf"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zoz-3K-XKq"/>
                     <connections>
                         <outlet property="resultLabel" destination="dOq-Af-c5n" id="qsq-ge-p3M"/>
                         <outlet property="spinButton" destination="qLg-4Y-zcW" id="UaJ-Je-fBP"/>
+                        <outlet property="stanceLabel" destination="DWo-YU-88E" id="TmQ-2m-8H0"/>
                         <outlet property="wheel" destination="GTs-7L-Orp" id="zOf-0o-5rY"/>
                     </connections>
                 </viewController>

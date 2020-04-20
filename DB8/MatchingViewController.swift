@@ -41,9 +41,12 @@ class MatchingViewController: UIViewController {
         displayLink.add(to: RunLoop.main, forMode: .default)
         
         var timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
-        
-        
-         
+    }
+    @IBAction func EnterMatchTouchedUp(_ sender: Any) {
+        let seconds = 0.0001
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.performSegue(withIdentifier: "seguetime2", sender: nil)
+        }
     }
     
     var value: CGFloat = 0.0
@@ -89,7 +92,14 @@ class MatchingViewController: UIViewController {
             }}
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+           // get a reference to the second view controller
+           let secondViewController = segue.destination as! RandomTopicViewController
+
+           // set a variable in the second view controller with the String to pass
+           secondViewController.receivedString = receivedString
+       }
 
     /*
     // MARK: - Navigation
