@@ -456,7 +456,6 @@
                                 <state key="normal" title="Go To Match"/>
                                 <connections>
                                     <action selector="goToMatchPressed:" destination="KPe-Ds-1Xk" eventType="touchUpInside" id="PAn-vL-PRM"/>
-                                    <segue destination="Ki5-93-HHV" kind="show" id="b4J-zz-MjM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLg-4Y-zcW">
@@ -487,6 +486,7 @@
                         <outlet property="spinButton" destination="qLg-4Y-zcW" id="UaJ-Je-fBP"/>
                         <outlet property="stanceLabel" destination="DWo-YU-88E" id="TmQ-2m-8H0"/>
                         <outlet property="wheel" destination="GTs-7L-Orp" id="zOf-0o-5rY"/>
+                        <segue destination="Ki5-93-HHV" kind="show" identifier="seguetime3" id="OXB-C9-Ojc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mus-yA-Lr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -43,7 +43,7 @@ class MatchingViewController: UIViewController {
         var timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
     @IBAction func EnterMatchTouchedUp(_ sender: Any) {
-        let seconds = 0.0001
+        let seconds = 0.33
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.performSegue(withIdentifier: "seguetime2", sender: nil)
         }

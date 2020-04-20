@@ -67,6 +67,10 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
         ran = false
         delete(collection: Firestore.firestore().collection("Chats").document("IcjyOhLDEmCQw9toNNQQ").collection("thread"), batchSize: 500)
         print("ahuhu")
+        let seconds = 0.33
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.performSegue(withIdentifier: "seguetime3", sender: nil)
+        }
     }
     func delete(collection: CollectionReference, batchSize: Int = 100) {
         print("bbbbbbbbbb")
@@ -89,6 +93,13 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
             print("jjaaj")
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
+        // get a reference to the second view controller
+        let secondViewController = segue.destination as! ChatViewController
+
+        // set a variable in the second view controller with the String to pass
+        secondViewController.receivedString = receivedString
+    }
 }
 

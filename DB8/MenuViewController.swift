@@ -107,7 +107,7 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             /*self.messagesCollectionView.scrollToBottom()
             
         })*/
-        let seconds = 0.0001
+        let seconds = 0.33
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.performSegue(withIdentifier: "seguetime", sender: nil)
         }

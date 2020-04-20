@@ -1,10 +1,3 @@
-//
-//  HomeController.swift
-//  DebateMenu
-//
-//  Created by Justin Robertson (student LM) on 1/20/20.
-//  Copyright © 2020 Justin Robertson. All rights reserved.
-//
 import UIKit
 
 class HomeController: UIViewController{
@@ -12,7 +5,7 @@ class HomeController: UIViewController{
     // MARK: - Properties
     
     var delegate: HomeControllerDelegate?
-    
+    var receivedString = "empty4"
     // MARK: - Init
     
     override func viewDidLoad() {
@@ -34,10 +27,10 @@ class HomeController: UIViewController{
         
         let num = Int.random(in: 0..<2)
         if num == 0{
-            navigationItem.title = "Stance: Positive"
+            navigationItem.title = "Stance: \(receivedString)"
         }
         else{
-            navigationItem.title = "Stance: Negative"
+            navigationItem.title = "Stance: \(receivedString)"
         }
         navigationItem.prompt = "Butting Heads..."
         

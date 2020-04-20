@@ -6,7 +6,7 @@ import FirebaseFirestore
 import SDWebImage
 
 class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
-
+    var receivedString = "empty3"
 
     var currentUser: User = Auth.auth().currentUser!
     
@@ -44,7 +44,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         super.viewDidLoad()
         
 //JUSTIN'S FUNC CALL!!!:
-        configHomeController()
+        configHomeController(stance: receivedString)
 //
         
         print("GUIGUGIGUI")
@@ -54,6 +54,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         else{
             user2UID = "MsS3bDi1iRXwpDnDOBPctdAdhTx1"
         }
+        
         self.title = user2Name ?? "Chat"
 
         navigationItem.largeTitleDisplayMode = .never
@@ -275,9 +276,10 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 
 
 //JUSTIN'S METHODS!!!:
-    func configHomeController(){
+    func configHomeController(stance: String){
         let homeController = HomeController()
         homeController.delegate = self
+        homeController.receivedString = receivedString
         centerController = UINavigationController(rootViewController: homeController)
         
         view.addSubview(centerController.view)
