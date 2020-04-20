@@ -18,8 +18,35 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     
     var messages: [Message] = []
 
+//JUSTIN'S VARS & SETUP!!!:
+    
+    var menuController: MenuController!
+    var centerController: UIViewController!
+    var isExpanded = false
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation{
+        return .slide
+    }
+    
+    override var prefersStatusBarHidden: Bool{
+        return isExpanded
+    }
+    
+//
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//JUSTIN'S FUNC CALL!!!:
+        configHomeController()
+//
+        
         print("GUIGUGIGUI")
         if (currentUser.uid=="MsS3bDi1iRXwpDnDOBPctdAdhTx1"){
             user2UID = "Cmy3rjqaFngw3iLS5pYtic0Lb493"
@@ -40,6 +67,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         messagesCollectionView.messagesDisplayDelegate = self
         /*delete(collection: Firestore.firestore().collection("Chats").document("IcjyOhLDEmCQw9toNNQQ").collection("thread"), batchSize: 500)*/
         loadChat()
+        
     }
     func delete(collection: CollectionReference, batchSize: Int = 100) {
     // Limit query to avoid out-of-memory errors on large collections.
@@ -241,4 +269,91 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 
     }
     
+
+    
+    
+
+
+//JUSTIN'S METHODS!!!:
+    func configHomeController(){
+        let homeController = HomeController()
+        homeController.delegate = self
+        centerController = UINavigationController(rootViewController: homeController)
+        
+        view.addSubview(centerController.view)
+        addChild(centerController)
+        centerController.didMove(toParent: self)
+        
+    }
+    
+    func configMenuController(){
+        if menuController == nil{
+            // add menu controller here
+            menuController = MenuController()
+            menuController.delegate = self
+            view.insertSubview(menuController.view, at: 0)
+            addChild(menuController)
+            menuController.didMove(toParent: self)
+        }
+    }
+    
+    func animatePanel(shouldExpand: Bool, menuOption: MenuOption?){
+        
+        if shouldExpand{
+            // show menu
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {self.centerController.view.frame.origin.x = self.centerController.view.frame.width - 80}, completion: nil)
+            
+        }
+        else{
+            // hide menu
+            /*UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {}, completion: nil)*/
+            
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {self.centerController.view.frame.origin.x = 0}) { (_) in
+                guard let menuOption = menuOption else{return}
+                self.didSelectMenuOption(menuOption: menuOption)
+            }
+            
+        }
+        
+        animateStatusBar()
+        
+    }
+    
+    func didSelectMenuOption(menuOption: MenuOption){
+        switch menuOption{
+        case .Profile:
+            print("Show Profile")
+        case .Inbox:
+            print("Show Inbox")
+        case .Exit:
+            print("Show Exit")
+            let controller = LeaveController()
+            present(UINavigationController(rootViewController: controller), animated: true, completion: nil)
+        case .Settings:
+            print("Show Settings")
+            
+            
+        }
+    }
+    
+    func animateStatusBar(){
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {self.setNeedsStatusBarAppearanceUpdate()}, completion: nil)
+    }
+//
+
 }
+
+//JUSTIN'S EXTENSION!!!:
+extension ChatViewController: HomeControllerDelegate {
+    
+    func handleMenuToggle(forMenuOption menuOption: MenuOption?) {
+        if !isExpanded{
+            configMenuController()
+        }
+        
+        isExpanded = !isExpanded
+        animatePanel(shouldExpand: isExpanded, menuOption: menuOption)
+    }
+}
+
+//
