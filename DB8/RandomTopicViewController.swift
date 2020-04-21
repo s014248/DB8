@@ -26,7 +26,7 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         stanceLabel.text = "Your Stance: \(receivedString)"
-        topics = ["Is water wet?", "Was it fair for harambe to be killed?", "Fractions or Decimals?", "Should school start times be later?", "Should Debate Teams be considered a sport?", "Should the SAT go away?", "Did Thanos have the right idea?", "Is it acceptable to put milk before cereal?", "Popeyes or Chick Fil A?", "Do laugh tracks make shows better?", "Pineapple on pizza?", "Cat or dogs?", "What's more attractive: money or personality?", "Star wars or star trek?"]
+        topics = ["Is water wet?", "Was it fair for harambe to be killed?", "Fractions or Decimals?", "Should school start times be later?", "Should Debate Teams be considered a sport?", "Should the SAT go away?", "Did Thanos have the right idea?", "Is it acceptable to put milk before cereal?", "Popeyes or Chick Fil A?", "Do laugh tracks make shows better?", "Pineapple on pizza?", "Cat or dogs?", "What's more attractive: money or personality?", "Star wars or star trek?", "Sunny side up or scrambled eggs?", "Burgers or Hot Dogs?", "Apple or Android?", "Beach or pools?", "Are Video Games good or bad for health?", "Is college worth it?", "Anime or cartoons?", "Pepperoni or plain pizza?", "Summer or Winter", "Marvel or DC?", "Monopoly or UNO?", "Biking or Skiing?"]
         
         resultLabel.text = ""
         resultLabel.adjustsFontSizeToFitWidth = true
