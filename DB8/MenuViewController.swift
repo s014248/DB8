@@ -111,7 +111,7 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.performSegue(withIdentifier: "seguetime", sender: nil)
         }
-    }
+    }//
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         // get a reference to the second view controller
