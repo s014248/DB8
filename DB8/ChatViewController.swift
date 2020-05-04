@@ -294,7 +294,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
             // add menu controller here
             menuController = MenuController()
             menuController.delegate = self
-            view.insertSubview(menuController.view, at: 0)
+            view.insertSubview(menuController.view, at: 1)
             addChild(menuController)
             menuController.didMove(toParent: self)
         }
