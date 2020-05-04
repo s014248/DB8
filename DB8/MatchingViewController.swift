@@ -24,19 +24,21 @@ class MatchingViewController: UIViewController {
     let circle = UIView()
     @IBOutlet weak var label: UILabel!
     var displayLink: CADisplayLink!
+    var seguetimeornot = false
     @IBOutlet weak var timeLabel: UILabel!
     var count = 10
     @IBOutlet weak var enterMatchButton: UIButton!
     @IBOutlet weak var stanceLabel: UILabel!
     var receivedString = "empty1"
     var receivedTopic = -98765
+    @IBOutlet weak var backButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         stanceLabel.text = "Your Stance: \(receivedString)"
         timeLabel.text = ""
         print(receivedString)
         enterMatchButton.isEnabled = false
-
+        backButton.isEnabled = true
         setUpCircle()
         displayLink = CADisplayLink(target: self, selector: #selector(handleAnimations))
         displayLink.add(to: RunLoop.main, forMode: .default)
@@ -44,6 +46,7 @@ class MatchingViewController: UIViewController {
         var timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
     @IBAction func EnterMatchTouchedUp(_ sender: Any) {
+        seguetimeornot = true
         let seconds = 0.33
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.performSegue(withIdentifier: "seguetime2", sender: nil)
@@ -94,14 +97,15 @@ class MatchingViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        if(seguetimeornot){
            // get a reference to the second view controller
            let secondViewController = segue.destination as! RandomTopicViewController
-
+            
            // set a variable in the second view controller with the String to pass
            secondViewController.receivedString = receivedString
            secondViewController.receivedTopic = receivedTopic
        }
+    }
 
     /*
     // MARK: - Navigation
@@ -113,5 +117,9 @@ class MatchingViewController: UIViewController {
     }
     */
 
+    @IBAction func backbuttonpressed(_ sender: Any) {
+        seguetimeornot = false
+        self.performSegue(withIdentifier: "bobjoe", sender: nil)
+    }
 }
 
