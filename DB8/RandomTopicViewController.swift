@@ -23,6 +23,7 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
     var topics = [String]()
     var ran = false
     var receivedString = "empty2"
+    var receivedTopic = -987654
     override func viewDidLoad() {
         super.viewDidLoad()
         stanceLabel.text = "Your Stance: \(receivedString)"
@@ -43,7 +44,7 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     
     @IBAction func spinPressed(_ sender: Any) {
-        wheel.selectRow(randomNum(), inComponent: 0, animated: true)
+        wheel.selectRow(receivedTopic, inComponent: 0, animated: true)
         
         UIView.animate(withDuration: 1.0, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1,options: .curveEaseOut, animations: {}, completion: { finished in UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseOut, animations: {}, completion: nil)})
         
@@ -100,6 +101,7 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
 
         // set a variable in the second view controller with the String to pass
         secondViewController.receivedString = receivedString
+        secondViewController.receivedTopic = topics[receivedTopic]
     }
 }
 

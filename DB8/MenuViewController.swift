@@ -19,7 +19,9 @@ import Foundation
 
 class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var stance = "bob"
+    var topic = -9876
     var imagePicker : UIImagePickerController?
+    var topicslist = ["Is water wet?", "Was it fair for harambe to be killed?", "Fractions or Decimals?", "Should school start times be later?", "Should Debate Teams be considered a sport?", "Should the SAT go away?", "Did Thanos have the right idea?", "Is it acceptable to put milk before cereal?", "Popeyes or Chick Fil A?", "Do laugh tracks make shows better?", "Pineapple on pizza?", "Cat or dogs?", "What's more attractive: money or personality?", "Star wars or star trek?", "Sunny side up or scrambled eggs?", "Burgers or Hot Dogs?", "Apple or Android?", "Beach or pools?", "Are Video Games good or bad for health?", "Is college worth it?", "Anime or cartoons?", "Pepperoni or plain pizza?", "Summer or Winter", "Marvel or DC?", "Monopoly or UNO?", "Biking or Skiing?"]
    /* @IBOutlet weak var imageView: UIImageView!*/
     //let contentView = ChatContentView()
   //  var chatController = OldChatViewController()
@@ -45,19 +47,44 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBAction func EnterMatchTouchedUp(_ sender: Any) {
         print("QWERPQWYETWIQUEPTWYEQUTUEIWQTY")
         var joe = Int.random(in: 1..<3)
+        var joejoe = Int.random(in: 0..<topicslist.count)
         var firebasecontent = "ddd"
+        var newtopic = -1234
         if (joe==1){
             firebasecontent = "Negative"
         }
         else{
             firebasecontent = "Positive"
         }
+        newtopic = joejoe
         let data: [String: Any] = [
             "content": firebasecontent
         ]
         let fakedata: [String: Any] = [
             "content": "empty"
         ]
+        let noobdata : [String: Any] = [
+            "topicaloo": newtopic
+        ]
+        let noobfakedata : [String: Any] = [
+            "topicaloo": -9876
+        ]
+        
+        Firestore.firestore().collection("test").document("joseph").getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()/*.map(String.init(describing:)) ?? "nil"*/
+                if let givenstance = dataDescription?["topicaloo"] as? Int{
+                    if (givenstance == -9876){
+                        self.topic = newtopic
+                        Firestore.firestore().collection("test").document("joseph").setData(noobdata)
+                    }
+                    else{
+                        self.topic = givenstance
+                        Firestore.firestore().collection("test").document("joseph").setData(noobfakedata)
+                    }
+                }
+            }
+        }
         Firestore.firestore().collection("test").document("a").getDocument { (document, error) in
             if let document = document, document.exists {
                 let dataDescription = document.data()/*.map(String.init(describing:)) ?? "nil"*/
@@ -81,32 +108,8 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                         }
                     }
                 }
-                
-               // stance = "positive"
             }
         }
-       /* Firestore.firestore().collection("test").document("positive").getDocument { (document, error) in
-            if let document = document, document.exists {
-                stance = "negative"
-            }
-        }
-        if (stance=="bob"){
-            var joe = Int.random(in: 1..<3)
-            if (joe==1){
-                Firestore.firestore().collection("test").document("negative").setData(data)
-                stance = "positive"
-            }
-            if (joe==2){
-                Firestore.firestore().collection("test").document("positive").setData(data)
-                stance = "negative"
-            }
-        }
-        else{
-            
-        }*/
-            /*self.messagesCollectionView.scrollToBottom()
-            
-        })*/
         let seconds = 0.33
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.performSegue(withIdentifier: "seguetime", sender: nil)
@@ -119,6 +122,7 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
         // set a variable in the second view controller with the String to pass
         secondViewController.receivedString = stance
+        secondViewController.receivedTopic = topic
     }
     /*@IBAction func changeImageTouchedUp(_ sender: UIButton) {
         self.present(imagePicker!, animated: true, completion: nil)

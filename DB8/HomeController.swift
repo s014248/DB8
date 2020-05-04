@@ -6,6 +6,7 @@ class HomeController: UIViewController{
     
     var delegate: HomeControllerDelegate?
     var receivedString = "empty4"
+    var receivedTopic = "bigempty4"
     // MARK: - Init
     
     override func viewDidLoad() {

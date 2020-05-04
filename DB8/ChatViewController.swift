@@ -7,7 +7,7 @@ import SDWebImage
 
 class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate, MessagesDataSource, MessagesLayoutDelegate, MessagesDisplayDelegate {
     var receivedString = "empty3"
-
+    var receivedTopic = "bigempty3"
     var currentUser: User = Auth.auth().currentUser!
     
     var user2Name: String?
@@ -44,7 +44,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         super.viewDidLoad()
         
 //JUSTIN'S FUNC CALL!!!:
-        configHomeController(stance: receivedString)
+        configHomeController(stance: receivedString, topic: receivedTopic)
 //
         
         print("GUIGUGIGUI")
@@ -276,10 +276,11 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 
 
 //JUSTIN'S METHODS!!!:
-    func configHomeController(stance: String){
+    func configHomeController(stance: String, topic: String){
         let homeController = HomeController()
         homeController.delegate = self
         homeController.receivedString = receivedString
+        homeController.receivedTopic = receivedTopic
         centerController = UINavigationController(rootViewController: homeController)
         
         view.addSubview(centerController.view)

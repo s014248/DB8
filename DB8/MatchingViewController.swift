@@ -29,6 +29,7 @@ class MatchingViewController: UIViewController {
     @IBOutlet weak var enterMatchButton: UIButton!
     @IBOutlet weak var stanceLabel: UILabel!
     var receivedString = "empty1"
+    var receivedTopic = -98765
     override func viewDidLoad() {
         super.viewDidLoad()
         stanceLabel.text = "Your Stance: \(receivedString)"
@@ -99,6 +100,7 @@ class MatchingViewController: UIViewController {
 
            // set a variable in the second view controller with the String to pass
            secondViewController.receivedString = receivedString
+           secondViewController.receivedTopic = receivedTopic
        }
 
     /*
