@@ -247,7 +247,7 @@
         <!--Menu View Controller-->
         <scene sceneID="XJ2-2Y-ASK">
             <objects>
-                <viewController id="vFF-29-9MK" customClass="MenuViewController" customModule="DB8" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeMenu" id="vFF-29-9MK" customClass="MenuViewController" customModule="DB8" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODB-r6-lWe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -528,6 +528,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="drU-b5-KbC"/>
         <segue reference="XwL-R0-kHD"/>
     </inferredMetricsTieBreakers>
 </document>
