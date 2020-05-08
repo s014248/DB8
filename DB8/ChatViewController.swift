@@ -23,6 +23,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     var menuController: MenuController!
     var centerController: UIViewController!
     var isExpanded = false
+    var x = 1
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
@@ -292,11 +293,24 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
     func configMenuController(){
         if menuController == nil{
             // add menu controller here
+            print("HELLO")
             menuController = MenuController()
             menuController.delegate = self
-            view.insertSubview(menuController.view, at: 1)
+            
+            /*centerController = UINavigationController(rootViewController: menuController)*/
+            /*view.addSubview(menuController.view)
+            addChild(menuController)*/
+            
+            view.insertSubview(menuController.view, at: x)
             addChild(menuController)
             menuController.didMove(toParent: self)
+            x+=1
+        }
+        else{
+            view.insertSubview(menuController.view, at: 0)
+            addChild(menuController)
+            menuController.didMove(toParent: self)
+            menuController = nil
         }
     }
     
@@ -326,16 +340,17 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         switch menuOption{
         case .Profile:
             print("Show Profile")
+            let controller = ReportPlayerController()
+            present(UINavigationController(rootViewController: controller), animated: true, completion: nil)
         case .Inbox:
             print("Show Inbox")
+            let controller = TopicController()
+            present(UINavigationController(rootViewController: controller), animated: true, completion: nil)
         case .Exit:
             print("Show Exit")
             let controller = LeaveController()
             present(UINavigationController(rootViewController: controller), animated: true, completion: nil)
-        case .Settings:
-            print("Show Settings")
-            
-            
+
         }
     }
     
@@ -350,10 +365,8 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 extension ChatViewController: HomeControllerDelegate {
     
     func handleMenuToggle(forMenuOption menuOption: MenuOption?) {
-        if !isExpanded{
             configMenuController()
-        }
-        
+                
         isExpanded = !isExpanded
         animatePanel(shouldExpand: isExpanded, menuOption: menuOption)
     }

@@ -10,6 +10,8 @@
 		7BEF784AA201F399AD0F4171 /* Pods_DB8.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2317C328088504F827612BF6 /* Pods_DB8.framework */; };
 		8806349223FEDC5B0051FE02 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8806349123FEDC5B0051FE02 /* SignUpViewController.swift */; };
 		8806349423FEDD110051FE02 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8806349323FEDD110051FE02 /* LogInViewController.swift */; };
+		880BE60424650560005FA9B9 /* ReportPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880BE60324650560005FA9B9 /* ReportPlayerController.swift */; };
+		880BE606246505A4005FA9B9 /* TopicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880BE605246505A4005FA9B9 /* TopicController.swift */; };
 		883F76DF24128B3100D87B46 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F76DE24128B3100D87B46 /* ChatViewController.swift */; };
 		883F76E124128C4100D87B46 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F76E024128C4100D87B46 /* Chat.swift */; };
 		883F76E324128C6000D87B46 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883F76E224128C6000D87B46 /* Message.swift */; };
@@ -55,6 +57,8 @@
 		2317C328088504F827612BF6 /* Pods_DB8.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DB8.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8806349123FEDC5B0051FE02 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8806349323FEDD110051FE02 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		880BE60324650560005FA9B9 /* ReportPlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportPlayerController.swift; sourceTree = "<group>"; };
+		880BE605246505A4005FA9B9 /* TopicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicController.swift; sourceTree = "<group>"; };
 		883F76DE24128B3100D87B46 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		883F76E024128C4100D87B46 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		883F76E224128C6000D87B46 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 				883F76E024128C4100D87B46 /* Chat.swift */,
 				883F76E224128C6000D87B46 /* Message.swift */,
 				883F76DE24128B3100D87B46 /* ChatViewController.swift */,
+				880BE60324650560005FA9B9 /* ReportPlayerController.swift */,
+				880BE605246505A4005FA9B9 /* TopicController.swift */,
 				DCA2E3ED244D4C22005277FB /* HomeController.swift */,
 				DCA2E3E3244D369A005277FB /* MenuController.swift */,
 				DCA2E3E5244D36BF005277FB /* LeaveController.swift */,
@@ -395,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880BE606246505A4005FA9B9 /* TopicController.swift in Sources */,
 				DCA2E3E8244D384D005277FB /* Protocols.swift in Sources */,
 				88484A6D23FD64CB002A7CFA /* ViewController.swift in Sources */,
 				88CFFB3324002E71003F8F01 /* MenuViewController.swift in Sources */,
@@ -410,6 +417,7 @@
 				883F76E324128C6000D87B46 /* Message.swift in Sources */,
 				883F76DF24128B3100D87B46 /* ChatViewController.swift in Sources */,
 				88484A6B23FD64CB002A7CFA /* SceneDelegate.swift in Sources */,
+				880BE60424650560005FA9B9 /* ReportPlayerController.swift in Sources */,
 				DCA2E3E4244D369A005277FB /* MenuController.swift in Sources */,
 				DCA2E3E6244D36BF005277FB /* LeaveController.swift in Sources */,
 			);
