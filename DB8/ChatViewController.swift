@@ -49,6 +49,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
 //
         
         print("GUIGUGIGUI")
+        print(currentUser.uid)
         if (currentUser.uid=="MsS3bDi1iRXwpDnDOBPctdAdhTx1"){
             user2UID = "Cmy3rjqaFngw3iLS5pYtic0Lb493"
         }
@@ -70,6 +71,11 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
         /*delete(collection: Firestore.firestore().collection("Chats").document("IcjyOhLDEmCQw9toNNQQ").collection("thread"), batchSize: 500)*/
         loadChat()
         
+        let message = Message(id: UUID().uuidString, content: "oioioiiioi", created: Timestamp(), senderID: currentUser.uid, senderName: currentUser.displayName!)
+        
+          //messages.append(message)
+          insertNewMessage(message)
+          save(message)
     }
     func delete(collection: CollectionReference, batchSize: Int = 100) {
     // Limit query to avoid out-of-memory errors on large collections.
@@ -134,7 +140,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                         //hgh
                         let chat = Chat(dictionary: doc.data())
                         //Get the chat which has user2 id
-                        if (chat?.users.contains(self.user2UID!))! {
+                        if ((chat!.users.contains("MsS3bDi1iRXwpDnDOBPctdAdhTx1"))) {
                             
                             self.docReference = doc.reference
                             //fetch it's thread collection
@@ -159,7 +165,7 @@ class ChatViewController: MessagesViewController, InputBarAccessoryViewDelegate,
                             return
                         } //end of if
                     } //end of for
-                    self.createNewChat()
+                    //self.createNewChat()
                 } else {
                     print("Let's hope this error never prints!")
                 }

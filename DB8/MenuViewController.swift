@@ -110,7 +110,7 @@ class MenuViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 }
             }
         }
-        let seconds = 0.33
+        let seconds = 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             self.performSegue(withIdentifier: "seguetime", sender: nil)
         }

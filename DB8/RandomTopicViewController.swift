@@ -64,9 +64,38 @@ class RandomTopicViewController: UIViewController, UIPickerViewDelegate, UIPicke
         return topics[row]
     }
     
+    
     @IBAction func goToMatchPressed(_ sender: Any) {
         ran = false
-        delete(collection: Firestore.firestore().collection("Chats").document("IcjyOhLDEmCQw9toNNQQ").collection("thread"), batchSize: 500)
+        var data: [String: Any] = [
+            "content": "hssa",
+            "id": "sjkas",
+            "senderID": "asdf",
+            "senderName": "oiyoiyoiy"
+        ]
+        delete(collection: Firestore.firestore().collection("Chats").document("joseph").collection("thread"), batchSize: 500)
+        Firestore.firestore().collection("Chats").document("joseph").collection("thread").addDocument(data: data, completion: { (error) in
+            
+            if let error = error {
+                print("Error Sending message: \(error)")
+                return
+            }
+            
+        })
+        var datab: [String: Any] = [
+            "content": "hssaasd",
+            "id": "sjkasdfas",
+            "senderID": "asasdfdf",
+            "senderName": "oiyoiasdfyoiy"
+        ]
+        Firestore.firestore().collection("Chats").document("joseph").collection("thread").addDocument(data: datab, completion: { (error) in
+                   
+                   if let error = error {
+                       print("Error Sending message: \(error)")
+                       return
+                   }
+                   
+               })
         print("ahuhu")
         let seconds = 0.33
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {

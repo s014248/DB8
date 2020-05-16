@@ -81,9 +81,14 @@ class MatchingViewController: UIViewController {
     @objc func update() {
         Firestore.firestore().collection("test").document("a").getDocument { (document, error) in
         if let document = document, document.exists {
-            while (document.data()?["content"] as? String=="Positive"||document.data()?["content"] as? String=="Negative"){
-                
-            }
+            /*while (document.data()?["content"] as? String=="Positive"||document.data()?["content"] as? String=="Negative"){
+                if (document.data()?["content"] as? String=="Positive"||document.data()?["content"] as? String=="Negative"){
+                    var sugma = 1
+                }
+                else{
+                    break
+                }
+            }*/
             if(self.count > 1) {
                 self.count -= 1
                 if(self.count <= 5) {
